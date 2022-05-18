@@ -46400,6 +46400,8 @@ definitions:
     description: >-
       MsgCreateVestingAccountResponse defines the Msg/CreateVestingAccount
       response type.
+  ezzatisawesome.blog.blog.MsgCreatePostResponse:
+    type: object
   ezzatisawesome.blog.blog.Params:
     type: object
     description: Params defines the parameters for the module.
