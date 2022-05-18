@@ -29733,6 +29733,40 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
+  /username/hello/hello/posts:
+    get:
+      summary: Queries a list of Posts items.
+      operationId: UsernameHelloHelloPosts
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              body:
+                type: string
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
 definitions:
   cosmos.auth.v1beta1.Params:
     type: object
@@ -50916,3 +50950,10 @@ definitions:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
+  username.hello.hello.QueryPostsResponse:
+    type: object
+    properties:
+      title:
+        type: string
+      body:
+        type: string
